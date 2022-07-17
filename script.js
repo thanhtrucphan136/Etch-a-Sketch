@@ -7,9 +7,8 @@ function drawingBoard(size){
     
     for (let i = 0; i < size*size; i++){
         let newGrid = document.createElement('div');
-        newGrid.style.background = 'yellow';
-        newGrid.style.border = '1px solid black';
-        //newGrid.textContent = i;
+        //newGrid.style.background = 'yellow';
+        newGrid.classList.add('grid');
         container.appendChild(newGrid);
     }
 }
