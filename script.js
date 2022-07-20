@@ -1,6 +1,6 @@
 let container = document.getElementById('container');
 let color = 'black';
-let click = true;
+//let click = true;
 
 function drawingBoard(size){
     container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -51,10 +51,11 @@ function changeColor(colorChoice){
 }
 
 //click to start or stop drawing
+/*
 document.querySelector('body').addEventListener('click', () =>{
     click = !click;
 });
-
+*/
 
 
 
