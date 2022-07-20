@@ -12,8 +12,11 @@
     <div id="content">
         <div id="container" ></div>
         <div>
-            Grids: <input id = "size-input" type="text" placeholder="number of grid" value="16">
-            <button class="size-btn">submit</button>
+            Board size: <span class="size-info">16 x 16</span>
+            <form id="form">
+                <input id = "size-input" type="range" min="1" max="64" value="16">
+            </form>
+            
         </div>
         <button class="black-btn" onclick="changeColor('black')">black</button>
         <button class="eraser-btn" onclick="changeColor('yellow')">eraser</button>

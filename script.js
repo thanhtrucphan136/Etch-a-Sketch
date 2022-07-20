@@ -15,14 +15,16 @@ function drawingBoard(size){
 }
 
 drawingBoard(16);
-let sizeBtn = document.querySelector('.size-btn');
-sizeBtn.addEventListener('click', changeSize);
+let form = document.querySelector('#form');
+form.addEventListener('mouseup',changeSize);
+let sizeInfo = document.querySelector('.size-info');
 
 function changeSize(){
     let grids = container.querySelectorAll('.grid');
     grids.forEach((e) => e.remove());
     let boardSize = document.getElementById('size-input').value;
     drawingBoard(boardSize);
+    sizeInfo.textContent = `${boardSize} x ${boardSize}`;
     console.log('clicked');
 }
 function coloring(){
