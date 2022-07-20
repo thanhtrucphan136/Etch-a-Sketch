@@ -20,6 +20,7 @@ let form = document.querySelector('#form');
 form.addEventListener('input',changeSize);
 let sizeInfo = document.querySelector('.size-info');
 
+//adjust drawing board's size
 function changeSize(){
     let grids = container.querySelectorAll('.grid');
     grids.forEach((e) => e.remove());
@@ -27,6 +28,8 @@ function changeSize(){
     drawingBoard(boardSize);
     sizeInfo.textContent = `${boardSize} x ${boardSize}`;
 }
+
+//change background color of each grid
 function coloring(){
     if (click){
         if (color === 'rainbow'){
@@ -44,6 +47,7 @@ function changeColor(colorChoice){
         color = colorChoice;
 }
 
+//click to start or stop drawing
 document.querySelector('body').addEventListener('click', () =>{
     click = !click;
 });

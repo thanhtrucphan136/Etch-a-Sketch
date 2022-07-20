@@ -17,10 +17,12 @@
                 <input id = "size-input" type="range" min="1" max="64" value="16">
             </form>
         </div>
-        <button onclick="changeColor('black')">black</button>
-        <button onclick="changeColor('rainbow')">rainbow</button>
-        <button  onclick="changeColor('yellow')">eraser</button>
-        <button onclick="changeSize()">reset</button>
+        <div class="buttons">
+            <input type="color" value="black" oninput="changeColor(this.value)">
+            <button onclick="changeColor('rainbow')">rainbow</button>
+            <button onclick="changeColor('yellow')">eraser</button>
+            <button onclick="changeSize()">reset</button>
+        </div>
     </div>
 </body>
 </html>
