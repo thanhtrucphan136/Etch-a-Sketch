@@ -16,7 +16,7 @@ function drawingBoard(size){
 
 drawingBoard(16);
 let form = document.querySelector('#form');
-form.addEventListener('mouseup',changeSize);
+form.addEventListener('input',changeSize);
 let sizeInfo = document.querySelector('.size-info');
 
 function changeSize(){
@@ -25,7 +25,6 @@ function changeSize(){
     let boardSize = document.getElementById('size-input').value;
     drawingBoard(boardSize);
     sizeInfo.textContent = `${boardSize} x ${boardSize}`;
-    console.log('clicked');
 }
 function coloring(){
     this.style.background = color;
