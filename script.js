@@ -34,7 +34,7 @@ function changeSize(){
 
 //change background color of each grid
 function coloring(){
-    if (click){
+    //if (click){
         if (color === 'rainbow'){
             const randomR = Math.floor(Math.random()*256);
             const randomG = Math.floor(Math.random()*256);
@@ -43,7 +43,7 @@ function coloring(){
         }else{
             this.style.background = color;
         }
-    }
+    //}
 }
 //change color option
 function changeColor(colorChoice){
