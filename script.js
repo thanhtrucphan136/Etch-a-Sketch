@@ -9,7 +9,7 @@ function drawingBoard(size){
     for (let i = 0; i < size*size; i++){
         let newGrid = document.createElement('div');
         newGrid.addEventListener('mouseover', coloring);
-        newGrid.style.background = 'yellow';
+        newGrid.style.background = 'white';
         newGrid.classList.add('grid');
         container.appendChild(newGrid);
     }
@@ -22,10 +22,13 @@ let sizeInfo = document.querySelector('.size-info');
 
 //adjust drawing board's size
 function changeSize(){
+    //remove old grids
     let grids = container.querySelectorAll('.grid');
     grids.forEach((e) => e.remove());
+    //take size-input and regenerate the board
     let boardSize = document.getElementById('size-input').value;
     drawingBoard(boardSize);
+    //update size-info
     sizeInfo.textContent = `${boardSize} x ${boardSize}`;
 }
 
@@ -42,7 +45,7 @@ function coloring(){
         }
     }
 }
-
+//change color option
 function changeColor(colorChoice){
         color = colorChoice;
 }
