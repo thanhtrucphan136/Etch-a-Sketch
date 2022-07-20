@@ -1,5 +1,6 @@
 let container = document.getElementById('container');
 let color = 'black';
+let click = true;
 
 function drawingBoard(size){
     container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -27,12 +28,27 @@ function changeSize(){
     sizeInfo.textContent = `${boardSize} x ${boardSize}`;
 }
 function coloring(){
-    this.style.background = color;
+    if (click){
+        if (color === 'rainbow'){
+            const randomR = Math.floor(Math.random()*256);
+            const randomG = Math.floor(Math.random()*256);
+            const randomB = Math.floor(Math.random()*256);
+            this.style.background = `rgb(${randomR},${randomG},${randomB})`;
+        }else{
+            this.style.background = color;
+        }
+    }
 }
 
 function changeColor(colorChoice){
-    color = colorChoice;
+        color = colorChoice;
 }
+
+document.querySelector('body').addEventListener('click', () =>{
+    click = !click;
+});
+
+
 
 
 
