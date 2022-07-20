@@ -9,10 +9,15 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="container" ></div>
-    <div>
-        Grids: <input id = "size-input" type="text" placeholder="number of grid" value="16">
-        <button class="size-btn">submit</button>
+    <div id="content">
+        <div id="container" ></div>
+        <div>
+            Grids: <input id = "size-input" type="text" placeholder="number of grid" value="16">
+            <button class="size-btn">submit</button>
+        </div>
+        <button class="black-btn" onclick="changeColor('black')">black</button>
+        <button class="eraser-btn" onclick="changeColor('yellow')">eraser</button>
+        <button onclick="changeSize()">reset</button>
     </div>
 </body>
 </html>

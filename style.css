@@ -3,14 +3,13 @@
     width: 500px;
     height: 500px;
 }
-
 .grid{
     background-color: yellow;
-   
 }
 .grid:hover{
     background-color: black;
 }
+
 
 
 
