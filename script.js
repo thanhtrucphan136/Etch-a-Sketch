@@ -1,5 +1,6 @@
 let container = document.getElementById('container');
-let color = 'black';
+let color = 'burlywood';
+let backgroundColor = 'beige';
 //let click = true;
 
 function drawingBoard(size){
@@ -9,7 +10,7 @@ function drawingBoard(size){
     for (let i = 0; i < size*size; i++){
         let newGrid = document.createElement('div');
         newGrid.addEventListener('mouseover', coloring);
-        newGrid.style.background = 'white';
+        newGrid.style.background = backgroundColor;
         newGrid.classList.add('grid');
         container.appendChild(newGrid);
     }
@@ -19,6 +20,7 @@ drawingBoard(16);
 let form = document.querySelector('#form');
 form.addEventListener('input',changeSize);
 let sizeInfo = document.querySelector('.size-info');
+
 
 //adjust drawing board's size
 function changeSize(){
@@ -32,7 +34,7 @@ function changeSize(){
     sizeInfo.textContent = `${boardSize} x ${boardSize}`;
 }
 
-//change background color of each grid
+//change color of each grid
 function coloring(){
     //if (click){
         if (color === 'rainbow'){
@@ -47,9 +49,25 @@ function coloring(){
 }
 //change color option
 function changeColor(colorChoice){
-        color = colorChoice;
+    color = colorChoice;
 }
 
+function changeBackgroundColor(choice){
+    backgroundColor = choice;
+    grids = document.querySelectorAll('.grid');
+    let boardSize = document.getElementById('size-input').value;
+    for (let i = 0; i < boardSize*boardSize; i++){
+        grids[i].style.background = backgroundColor;
+    }
+}
+function reset(){
+    let resetBackground = document.querySelector('.background-color');
+    resetBackground.value = resetBackground.defaultValue;
+    let resetColorPicker = document.querySelector('.color-picker');
+    resetColorPicker.value = resetColorPicker.defaultValue;
+    backgroundColor = 'beige';
+    changeSize();
+}
 //click to start or stop drawing
 /*
 document.querySelector('body').addEventListener('click', () =>{

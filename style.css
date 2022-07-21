@@ -1,7 +1,12 @@
 *{
     margin: 0;
+    background-color: #f5f5db;
+    color: #b77a34;
+    font-family: monospace;
 }
-
+header{
+    font-size: 35px;
+}
 body{
     display: flex;
     flex-direction: column;
@@ -20,6 +25,12 @@ body{
     cursor: pointer;
 }
 
+.grid{
+    border-radius: 5px;
+}
+.grid:hover{
+    transform: scale(1.2);
+}
 #content{
     display: flex;
     flex-direction: row;
@@ -43,46 +54,55 @@ body{
     text-align: center;
     margin-bottom: 10px;
 }
-#size-input{
-    cursor: pointer;
+
+.picker-container, .background-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.color-picker{
+.color-picker, .background-color{
+    margin: 10px;
     -webkit-appearance: none;
     width: 80px;
     height: 80px;
     border: none;
     cursor: pointer;
+    shadow: 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    
 }
 input[type='color']::-webkit-color-swatch-wrapper {
     padding: 0px;
-    background-color: white;
     border-color: transparent;
 }
   
 input[type='color']::-webkit-color-swatch {
     border: none;
     border-radius: 50%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
-.color-picker:hover{
-    transform: scale(1.05);
+.color-picker:hover, .background-color:hover{
+    transform: scale(1.06);
 }
 
 button{
-    border: 0.5px solid black;
-    background-color: white;
+    border: none;
+    background-color: beige;
     width: 130px;
     padding: 7px 0px;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-weight: 600;
 }
 
 button:hover{
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
 
 button:active{
-    background-color: gray;
+    background-color: #b77a34;
+    color: beige;
 }
 
 

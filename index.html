@@ -19,10 +19,18 @@
                 </form>
             </div>
             <div class="buttons">
-                <input class="color-picker" type="color" value="black" oninput="changeColor(this.value)">
+                <div>
+                    <div class="picker-container">
+                        <input class="color-picker" type="color" value="#deb887" oninput="changeColor(this.value)"> <span>color</span>
+                    </div>
+                    <div class="background-container">
+                        <input class="background-color" type="color" value="#f5f5db" oninput="changeBackgroundColor(this.value)"> <span>background</span>
+                    </div>
+                </div>
                 <button onclick="changeColor('rainbow')">rainbow</button>
-                <button onclick="changeColor('white')">eraser</button>
-                <button onclick="changeSize()">reset</button>
+                <button onclick="changeColor('beige')">eraser</button>
+                <button onclick="changeSize()">clear</button>
+                <button onclick="reset()">reset</button>
             </div>
         </div>
         <div id="container" ></div>
