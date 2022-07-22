@@ -42,6 +42,8 @@ function coloring(){
             const randomG = Math.floor(Math.random()*256);
             const randomB = Math.floor(Math.random()*256);
             this.style.background = `rgb(${randomR},${randomG},${randomB})`;
+        }else if (color === 'eraser'){
+            this.style.background = backgroundColor;
         }else{
             this.style.background = color;
         }
