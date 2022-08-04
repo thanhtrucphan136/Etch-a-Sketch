@@ -5,7 +5,7 @@ let backgroundColor = 'beige';
 
 function drawingBoard(size){
     container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
-    container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
     
     for (let i = 0; i < size*size; i++){
         let newGrid = document.createElement('div');
